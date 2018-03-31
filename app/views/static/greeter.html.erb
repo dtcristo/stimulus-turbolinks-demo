@@ -1,0 +1,8 @@
+<h1>Greeter demo</h1>
+<p><%= link_to 'Home', root_path %></p>
+
+<div data-controller="greeter">
+  <input data-target="greeter.name" type="text" autocomplete="off">
+  <button data-action="click->greeter#greet">Greet</button>
+  <span data-target="greeter.output"></span>
+</div>

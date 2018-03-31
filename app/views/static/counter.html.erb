@@ -1,0 +1,16 @@
+<h1>Counter demo</h1>
+<p><%= link_to 'Home', root_path %></p>
+
+<h2>Counter</h2>
+<div data-controller="counter">
+  <button data-action="counter#decrement">-</button>
+  <span data-target="counter.value">0</span>
+  <button data-action="counter#increment">+</button>
+</div>
+
+<h2>Permanent counter</h2>
+<div data-controller="counter">
+  <button data-action="counter#decrement">-</button>
+  <span id="counter-1" data-turbolinks-permanent data-target="counter.value">0</span>
+  <button data-action="counter#increment">+</button>
+</div>

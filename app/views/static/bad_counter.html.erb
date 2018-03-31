@@ -1,0 +1,8 @@
+<h1>Bad counter demo</h1>
+<p><%= link_to 'Home', root_path %></p>
+
+<div data-controller="bad-counter">
+  <button data-action="bad-counter#decrement">-</button>
+  <span data-target="bad-counter.value">0</span>
+  <button data-action="bad-counter#increment">+</button>
+</div>
