@@ -1,0 +1,32 @@
+<div id="enquiry" data-controller="form" data-target="form.replace" data-turbolinks-permanent>
+  <h2>Contact us</h2>
+  <% @enquiry ||= Enquiry.new %>
+  <% if @enquiry.new_record? %>
+    <%= form_with(model: @enquiry, data: { type: 'html', action: 'ajax:success->form#response ajax:error->form#exception' }) do |form| %>
+      <% if @enquiry.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@enquiry.errors.count, 'error') %> prohibited this enquiry from being saved:</h2>
+          <ul>
+          <% @enquiry.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+      <div class="field">
+        <%= form.label :message %>
+        <%= form.text_area :message %>
+      </div>
+      <div class="actions">
+        <%= form.submit 'Contact us', data: { disable_with: 'Processing' } %>
+      </div>
+    <% end %>
+  <% else %>
+    <p>Thanks <%= @enquiry.name %>!</p>
+    <p>You enquiry was successfully submitted.</p>
+  <% end %>
+</div>

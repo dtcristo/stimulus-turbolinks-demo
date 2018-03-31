@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/greeter', to: 'static#greeter'
   get '/bad-counter', to: 'static#bad_counter'
   get '/counter', to: 'static#counter'
+
+  resources :enquiries, only: [:create]
 end

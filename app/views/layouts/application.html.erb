@@ -12,5 +12,8 @@
   <body>
     <p><%= Time.zone.now.strftime('%T.%L') %></p>
     <%= yield %>
+    <br>
+    <hr>
+    <%= render 'enquiries/new' %>
   </body>
 </html>
