@@ -5,20 +5,18 @@ export default class extends Controller {
   valueTarget: HTMLElement
 
   increment() {
-    let newValue = this.getValue() + 1
-    this.setValue(newValue)
+    this.value++
   }
 
   decrement() {
-    let newValue = this.getValue() - 1
-    this.setValue(newValue)
+    this.value--
   }
 
-  private getValue(): number {
+  private get value(): number {
     return parseInt(this.valueTarget.textContent)
   }
 
-  private setValue(value: number) {
-    this.valueTarget.textContent = value.toString()
+  private set value(newValue: number) {
+    this.valueTarget.textContent = newValue.toString()
   }
 }

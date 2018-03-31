@@ -6,12 +6,12 @@ export default class extends Controller {
   value = 0
 
   increment() {
-    this.value = this.value + 1
+    this.value++
     this.refreshDom()
   }
 
   decrement() {
-    this.value = this.value - 1
+    this.value--
     this.refreshDom()
   }
 
