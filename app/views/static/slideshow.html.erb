@@ -1,0 +1,11 @@
+<h1>Slideshow demo</h1>
+<p><%= link_to 'Home', root_path %></p>
+
+<div id="slideshow" data-turbolinks-permanent data-controller="slideshow" data-slideshow-index="0">
+  <button data-action="slideshow#previous">←</button>
+  <button data-action="slideshow#next">→</button>
+  <div data-target="slideshow.slide" class="slide">🐵</div>
+  <div data-target="slideshow.slide" class="slide">🙈</div>
+  <div data-target="slideshow.slide" class="slide">🙉</div>
+  <div data-target="slideshow.slide" class="slide">🙊</div>
+</div>

@@ -13,4 +13,7 @@ class StaticController < ApplicationController
 
   def counter
   end
+
+  def slideshow
+  end
 end

@@ -3,3 +3,14 @@
 [data-turbolinks-preview] {
   background-color: lightblue;
 }
+
+// Styles for slideshow demo
+.slide {
+  display: none;
+  font-size: 96px;
+  line-height: 96px;
+}
+
+.slide.slide--current {
+  display: block;
+}
