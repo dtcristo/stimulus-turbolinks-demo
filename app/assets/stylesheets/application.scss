@@ -19,3 +19,25 @@
 .slide.slide--current {
   display: block;
 }
+
+.pokemon {
+  display: flex;
+  flex-wrap: wrap;
+  :hover {
+    background-color: khaki;
+  }
+  :active {
+    background-color: goldenrod;
+  }
+}
+
+.pokemon__item {
+  border: solid;
+  margin: 12px;
+  padding: 12px;
+  width: 120px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

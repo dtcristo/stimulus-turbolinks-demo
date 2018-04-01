@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_03_31_115036) do
+ActiveRecord::Schema.define(version: 2018_04_01_110739) do
 
   create_table "enquiries", force: :cascade do |t|
     t.string "name"
     t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pokemons", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.string "move"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

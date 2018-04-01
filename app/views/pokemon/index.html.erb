@@ -1,0 +1,9 @@
+<h1>Lazy loading</h1>
+<p><%= link_to 'Home', root_path %></p>
+
+<div data-controller="lazy-load" data-lazy-load-page-url="<%= pokemon_page_url('PAGE_NUMBER') %>" data-lazy-load-page-number="1">
+  <div class="pokemon" data-target="lazy-load.pages">
+    <%= render 'page' %>
+  </div>
+  <button data-action="lazy-load#load">Load more</button>
+</div>

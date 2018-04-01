@@ -1,0 +1,7 @@
+<% @pokemon.each do |pokemon| %>
+  <div class="pokemon__item">
+    <p><strong><%= pokemon.id %>. <%= pokemon.name %></strong></p>
+    <p><%= pokemon.location %></p>
+    <p><%= pokemon.move %></p>
+  </div>
+<% end %>

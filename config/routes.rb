@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   get '/slideshow', to: 'static#slideshow'
 
   resources :enquiries, only: [:create]
+
+  resources :pokemon, only: [:index]
+  get '/pokemon/page/:page', to: 'pokemon#page', as: :pokemon_page
 end
