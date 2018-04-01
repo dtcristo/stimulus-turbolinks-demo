@@ -1,5 +1,16 @@
 <h1>Basic controller</h1>
 <p><%= link_to 'Home', root_path %></p>
 
-<div data-controller="basic">
+<div data-controller="detachment" data-attached>
+  <button data-action="detachment#toggle" data-target="detachment.toggle"></button>
+  <div data-target="detachment.detachment">
+
+    <div class="basic" data-controller="basic">
+      <div>"basic" controller</div>
+      <input type="text" autocomplete="off">
+    </div>
+
+  </div>
+  <div class="cache" data-target="detachment.cache">
+  </div>
 </div>
