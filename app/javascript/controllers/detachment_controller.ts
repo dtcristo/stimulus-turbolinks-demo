@@ -24,14 +24,14 @@ export default class extends Controller {
 
   private detach() {
     this.children = $(this.detachmentTarget).children().detach()
-    this.element.removeAttribute('data-attached')
+    this.data.delete('attached')
     this.updateToggleText()
   }
 
   private attach() {
     this.children.appendTo(this.detachmentTarget)
     this.children = null
-    this.element.setAttribute('data-attached', '')
+    this.data.set('attached', '')
     this.updateToggleText()
   }
 
@@ -44,6 +44,6 @@ export default class extends Controller {
   }
 
   private isAttached(): boolean {
-    return this.element.hasAttribute('data-attached')
+    return this.data.has('attached')
   }
 }
